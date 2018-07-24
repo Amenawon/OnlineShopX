@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Abstractions
 {
-    public class Customers
+    public partial class Customers
     {
         public int CustomerId { get; set; }
         public string FirstName { get; set; }

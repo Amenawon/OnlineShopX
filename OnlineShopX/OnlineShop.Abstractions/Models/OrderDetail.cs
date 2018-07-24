@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Abstractions
 {
-    public class OrderDetail
+    public partial class OrderDetail
     {
         public int OrderDetailId { get; set; }
         public int OrderId { get; set; }
