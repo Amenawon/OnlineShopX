@@ -15,6 +15,9 @@ namespace OnlineShop.Abstractions
         public int TotalPrice { get; set; }
         public int Quantity { get; set; }
         public int Discount { get; set; }
-        public Boolean Delivered { get; set; }
+        public bool Delivered { get; set; }
+
+        public virtual ICollection<Orders> Orders { get; set; }
+        public virtual ICollection<Products> Products { get; set; }
     }
 }
