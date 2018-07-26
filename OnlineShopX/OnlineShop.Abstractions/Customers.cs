@@ -21,5 +21,7 @@ namespace OnlineShop.Abstractions
         public string Password { get; set; }
         public string BillingAddress { get; set; }
         public DateTime DateRegistered { get; set; }
+
+        public virtual ICollection<Orders> Orders { get; set; }
     }
 }
