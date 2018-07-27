@@ -12,5 +12,7 @@ namespace OnlineShop.Abstractions
         public string CategoryName { get; set; }
         public int CategoryDescription { get; set; }
         public byte CategoryPicture { get; set; }
+
+        public virtual ICollection<Products> Products { get; set; }
     }
 }

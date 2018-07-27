@@ -19,5 +19,8 @@ namespace OnlineShop.Abstractions
         public string TransactionStatus { get; set; }
         public DateTime PaymentDate { get; set; }
 
+        public Payment Payment { get; set; }
+        public virtual ICollection<OrderDetail> OrderDetail { get; set; }
+        public virtual ICollection<Customers> Customers { get; set; }
     }
 }
