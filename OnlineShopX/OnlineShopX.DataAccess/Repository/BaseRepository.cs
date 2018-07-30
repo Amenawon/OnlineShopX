@@ -63,16 +63,25 @@ namespace OnlineShopX.DataAccess
             }
         }
 
-        public async Task<int> DeleteItemAsync(TEntity item)
+        public async Task<bool> DeleteItemAsync(params object[] id)
         {
             try
             {
-                var model = _db.Set<TEntity>().Remove(item);
-                return await _db.SaveChangesAsync();
+                using (var context = new OnlineShopDbContext())
+                {
+                    var entity = await context.Set<TEntity>().FindAsync(id);
+
+                    context.Set<TEntity>().Remove(entity);
+
+                    await context.SaveChangesAsync();
+
+                    return true;
+                }
             }
             catch (DbUpdateConcurrencyException ex)
             {
 
+                return false;
                 throw ex.InnerException;
             }
            
