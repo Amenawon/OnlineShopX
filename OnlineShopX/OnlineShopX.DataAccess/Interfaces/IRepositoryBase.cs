@@ -14,7 +14,6 @@ namespace OnlineShopX.DataAccess
         Task <TEntity> GetItemAsync(params object[] id);
         Task<IEnumerable<TEntity>> GetAsync();
         Task<int> UpdateItemAsync(TEntity item);
-        Task<bool> DeleteItemAsync(params object [] ids);
-        void Dispose();
+        Task<bool> DeleteItemAsync(params object [] id);
     }
 }
