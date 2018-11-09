@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OnlineShop.Abstractions;
 
-namespace OnlineShopX.DataAccess
+namespace OnlineShop.DataAccess
 {
     public interface IRepositoryBase<TEntity> where TEntity : class
     {

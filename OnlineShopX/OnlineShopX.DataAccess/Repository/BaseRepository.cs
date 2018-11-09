@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 using OnlineShop.Abstractions;
 using System.Data.Entity.Infrastructure;
 
-namespace OnlineShopX.DataAccess
+namespace OnlineShop.DataAccess
 {
     public class BaseRepository<TEntity> : IDisposable, IRepositoryBase<TEntity> where TEntity : class
     {
-        protected OnlineShopDbContext _db = new OnlineShopDbContext();
+        protected ApplicationDbContext _db = new ApplicationDbContext();
 
         public async Task<int> AddItemAsync(TEntity item)
         {
@@ -67,7 +67,7 @@ namespace OnlineShopX.DataAccess
         {
             try
             {
-                using (var context = new OnlineShopDbContext())
+                using (var context = new ApplicationDbContext())
                 {
                     var entity = await context.Set<TEntity>().FindAsync(id);
 

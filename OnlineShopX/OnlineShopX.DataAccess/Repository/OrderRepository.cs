@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OnlineShop.Abstractions;
-using OnlineShopX.DataAccess.Interfaces;
+using OnlineShop.DataAccess.Interfaces;
 
-namespace OnlineShopX.DataAccess.Repository
+namespace OnlineShop.DataAccess.Repository
 {
     public class OrderRepository : BaseRepository<Orders>, IOrderRepository
     {

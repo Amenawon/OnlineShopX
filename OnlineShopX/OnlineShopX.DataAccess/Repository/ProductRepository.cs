@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using OnlineShopX.DataAccess.Interfaces;
+using OnlineShop.DataAccess.Interfaces;
 using OnlineShop.Abstractions;
 
-namespace OnlineShopX.DataAccess.Repository
+namespace OnlineShop.DataAccess.Repository
 {
     public class ProductRepository : BaseRepository<Products>, IProductRepository
     {

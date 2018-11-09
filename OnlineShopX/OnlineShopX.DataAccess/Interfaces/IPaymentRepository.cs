@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OnlineShop.Abstractions;
-namespace OnlineShopX.DataAccess.Interfaces
+namespace OnlineShop.DataAccess.Interfaces
 {
     public interface IPaymentRepository
     {
