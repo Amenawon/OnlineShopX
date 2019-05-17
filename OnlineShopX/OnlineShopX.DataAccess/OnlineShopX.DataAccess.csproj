@@ -53,6 +53,11 @@
     <Compile Include="Interfaces\IOrderRepository.cs" />
     <Compile Include="Interfaces\IPaymentRepository.cs" />
     <Compile Include="Interfaces\IProductRepository.cs" />
+    <Compile Include="Migrations\201901301852405_init.cs" />
+    <Compile Include="Migrations\201901301852405_init.Designer.cs">
+      <DependentUpon>201901301852405_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Repository\BaseRepository.cs" />
     <Compile Include="OnlineShoDBContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,6 +78,11 @@
       <Project>{fc493c0e-bd68-43f8-afc5-bdf5c86d8fa5}</Project>
       <Name>OnlineShop.Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201901301852405_init.resx">
+      <DependentUpon>201901301852405_init.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
